@@ -13,7 +13,7 @@ Install Cookiecutter from PyPy
 You can use this cookiecutter straight from the repo (provided you have working gitlab credentials the first time).
 
     mkdir my-new-role
-    cookiecutter -o my-new-role git@gitlab.tssg.org:infrastructure-group/ansible-role.git
+    cookiecutter -o my-new-role git@github.com:csibman27/ansible-role.git
 
 The cookiecutter will then ask you a bunch of questions that will set up the role.
 
