@@ -1,0 +1,10 @@
+{
+    "role_name": "default_role",
+    "repo_name": "{{ cookiecutter.role_name.lower().replace(' ', '_') }}",
+    "role_description": "what the role does",
+    "full_name": "Author Name",
+    "email": "author@name.com",
+    "company": "Walton Institute, South East Technological University",
+    "role_date": "{% now 'local' %}",
+    "namespace": "rits"
+}

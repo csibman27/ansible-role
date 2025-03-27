@@ -1,0 +1,19 @@
+variables:
+  ANSIBLE_ROLES_PATH: ../
+
+stages:
+  - syntax check
+  - lint
+
+ansible-syntax-check:
+  image: cytopia/ansible:latest
+  stage: syntax check
+  script: chmod 740 $CI_PROJECT_DIR && ansible-playbook tests/test.yml -i tests/inventory --syntax-check                                     
+
+ansible-lint:
+  image:
+    name: cytopia/ansible-lint:latest
+    entrypoint: ['/bin/sh','-c']
+  stage: lint
+  script:
+    ansible-lint tests/test.yml
